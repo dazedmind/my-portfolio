@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Share+Tech+Mono&display=swap');
+
+:root{
+    --text-color:#8eb33b;
+    --bg-color: #222;
+    --fg-color: #1c1c1c;
+}
+
+@media (min-width: 577px) {
+    .section2-content-1 {
+        margin: 0;
+    }
+    .section2-content-1, 
+    .section2-content-2, 
+    .section2-content-3,
+    .section2-content-4,
+    .section2-content-5 {
+        margin: 0;
+    }
+    .section2-content-1 {        
+        font-size: 18px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+    }
+    .section2-content-2 {
+        font-size: 18px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+    }
+    .section2-content-3 {
+        font-size: 18px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+    }
+    .section2-content-4 {
+        font-size: 18px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+        width: inherit;
+    }
+    .section2-content-5 {
+        font-size: 18px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+        width: inherit;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .project-img {
+        width: 100%;
+        height: 65%;
+    }
+    
+    .card {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 1rem;
+        font-size: 16px;
+    }
+    .user-input {
+        width: 17rem;
+    }
+ 
+    #message-input {
+        width: 17rem;
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+
+    .end {
+        margin-top: 0;
+        padding: 2rem 0rem;
+    }
+}
