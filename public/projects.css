@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 
 :root{
     --text-color:#8eb33b;
@@ -215,6 +217,15 @@ body {
 }
 
 /*--elements--*/
+
+
+.fa-circle-chevron-down {
+    color: var(--text-color);
+}
+
+.fa-circle-chevron-up {
+    color: crimson ;
+}
 a:link {
     text-decoration: none;
 }
@@ -285,6 +296,7 @@ em {
 }
 .project-description {
     margin: 1rem;
+    font-family: "Source Code Pro", monospace;
 }
 
 .ext-link {
