@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="main.css" type="text/css" >
-    <link rel="stylesheet" media="screen and (max-width: 576px)" href="./vwp-small.css" type="text/css">
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="./vwp-medium.css" type="text/css">
-    <link rel="stylesheet" media="screen and (max-width: 992px)" href="./vwp-wide.css" type="text/css">
-    <link rel="stylesheet" media="screen and (max-width: 1230px)" href="./vwp-wider.css" type="text/css">
-    <link rel="icon" href="./img/portfolio.png" type="icon/img">
+    <link rel="icon" href="./img/allengfx.png" type="icon/img">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 
 </head>
@@ -19,26 +16,26 @@
 <header id="header">
     <div>
         <p id="page-title"> 
-            <a href="#"><img id="header-icon" src="img/fileicon95.png" alt=""></a> My Portfolio
+            <a href="#"><img id="header-icon" src="img/fileicon95.png" alt="" data-subtitle></a> My Portfolio
         </p>
     </div>
     <nav>
         <div class="navbar">
-            <div>
-                <a class="nav-link" href="#section-2">/about</a>
+            <div class="link">
+                <a class="nav-link" href="#section-2" data-title>  <img src="img/avatar.png" alt="" class="nav-sprite" data-sprite> about</a>
             </div>
-            <div>
-                <a class="nav-link" href="#projects-content">/projects</a>
+            <div class="link">
+                <a class="nav-link" href="projects.html" data-title> <img src="img/start-up.png" alt="" class="nav-sprite" data-sprite> projects</a>
             </div>
-            <div>
-                <a class="nav-link" href="#footer">/contact</a>
+            <div class="link">
+                <a class="nav-link" href="#footer" data-title> <img src="img/call-button.png" alt="" class="nav-sprite" data-sprite> contact</a>
             </div>
             <div class="close-menu">
-                <span><i class="fa-solid fa-circle-chevron-up"></i></span>
+                <span><i class="fa-solid fa-circle-chevron-up fa-xl"></i></span>
             </div>
         </div>
         <div class="main-menu">
-            <span class="open-menu"><i class="fa-solid fa-circle-chevron-down"></i></span>
+            <span class="open-menu"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></span>
         </div>
     </nav>
 </header>
@@ -50,10 +47,10 @@
     <div class="background">
         <div id="section-1">
             <div class="content-text">
-                <h2>Hello! I am</h2>
-                <h1 class="typing">Allen</h1>
-                <p id="subtitle">A front-end web developer and graphic designer.</p>
-                <a class="more-btn" href="#section-2">root@host:~$ ls</a>
+                <h2 data-text>Hello! I am</h2>
+                <h1 class="typing" data-text>Allen</h1>
+                <p id="subtitle" data-text>A front-end web developer and graphic designer.</p>
+                <a class="more-btn" href="#section-2" data-bg>root@host:~$ ls</a>
             </div>
             <div class="content-img">
                 <img class="prof-picture" src="./img/picture.jpg" alt="">
@@ -63,104 +60,145 @@
 
     <!--SECTION-2-->
     <div id="section-2">
-        <h2 class="s2-title">about.me:~$</h2>
-
-        <!--about-section-->
-        <div class="section2-content-1">
-            <img class="window-btn" src="./img/button.png" alt="">
-            <h2 class="about-title">/background</h2>
-            <p class="typing">I am Allen Valena, a self taught web-developer and graphic designer, 17 years old from Manila, Philippines. I like to 
-                create and design web applications.
-            </p>
-
-            <div class="education">
-                <h3>~/education</h3>
-                <a href="https://en.wikipedia.org/wiki/Ramon_Magsaysay_High_School,_Manila">Ramon Magsaysay Highschool</a> <br>
-                <em>JHS</em>
-                <p> 2016-2020</p>
-                <br>
-                <a href="https://en.wikipedia.org/wiki/Chinese_General_Hospital_Colleges">Chinese General Hospital Colleges</a> <br>
-                <em>SHS-STEM</em>
-                <p>2020-2022</p>
-                <br>
-                <a href="https://en.wikipedia.org/wiki/Pamantasan_ng_Lungsod_ng_Maynila">Pamantasan ng Lungsod ng Maynila</a> <br>
-                <em>Bachelor of Science in Information Technology</em>
-                <p>2022-present</p>
+        <h2 class="s2-title" data-text>about.me:~$</h2>
+        <div id="wide-flex">
+            <div class="section2-content-1" data-card>
+                <img class="window-btn" src="./img/button.png" alt="">
+                <h2 class="about-title" data-title>/background</h2>
+                <p class="prologue" data-text>Hello world! I am Allen Valena, a self taught web-developer and graphic designer, 17 years old from Manila, <span class="highlight"> <a href="https://www.google.com/search?q=philippines" target="_blank" data-subtitle>Philippines</a></span>. I like to create and design web applications.
+                </p>
+    
+                <p class="prologue" data-text>
+                    I have been studying front-end developing since I was 13 although that time, I was struggling really hard since my little mind can't comprehend basic HTML tags. Back then I don't really understand how the internet works. As a kid, I am always fascinated on how things work around me. From then on I knew that this is what I want to do.
+                </p>
+                <span>
+                    <button id="education-btn" onclick="showEducation()" data-title>/education</button>
+                </span>
+                <div id="education" data-title>
+                    <!-- <h3>/education</h3> -->
+                    <a href="https://en.wikipedia.org/wiki/Ramon_Magsaysay_High_School,_Manila" data-subtitle>Ramon Magsaysay Highschool</a> <br>
+                    <em>JHS</em>
+                    <p data-text> 2016-2020</p>
+                    <br>
+                    <a href="https://en.wikipedia.org/wiki/Chinese_General_Hospital_Colleges" data-subtitle>Chinese General Hospital Colleges</a> <br>
+                    <em>SHS-STEM</em>
+                    <p data-text>2020-2022</p>
+                    <br>
+                    <a href="https://en.wikipedia.org/wiki/Pamantasan_ng_Lungsod_ng_Maynila" data-subtitle>Pamantasan ng Lungsod ng Maynila</a> <br>
+                    <em>Bachelor of Science in Information Technology</em>
+                    <p data-text>2022-present</p>
+                    <button id="educ-hideBtn" onclick="closeEducation()" data-subtitle>collapse</button>
+                </div>
+    
+                <!-- <span>
+                    <button id="hobbies-btn" onclick="functionss()">/hobbies</button>
+                </span>
+                <div id="hobbies">
+                    <p class="prologue">Aside from coding, I really love Photography. As any other teenager, I also love playing FPS and MOBA games; most specifically Valorant and League of Legends.
+                    </p>
+                </div> -->
+                <span>
+                    <a class="ext-link" href="./Resume.pdf" data-subtitle>download cv</a>
+                </span>
             </div>
-            <span>
-                <a class="ext-link" href="./Resume.pdf">download cv</a>
-            </span>
-        </div>
-
-        <!--skills-section-->
-        <div class="section2-content-2">
-            <img class="window-btn" src="./img/button.png" alt="">
-            <h2 class="about-title">/skills</h2>
-            <ul class="skills-list">
-                <li>
-                    <a class="skill" href="https://www.google.com/search?q=html&source=lmns&bih=789&biw=1440&hl=en&sa=X&ved=2ahUKEwiB_4Xai7L4AhUnUvUHHe7gCJ4Q_AUoAHoECAEQAA">↳ html</a>
-                </li>
-                <li>
-                    <a class="skill" href="https://www.google.com/search?q=css&oq=css&aqs=chrome..69i57j69i59j0i433i512j0i131i433i512l2j0i433i512j46i175i199i433i512j0i131i433i512j0i131i433j0i433i512.992j0j9&sourceid=chrome&ie=UTF-8">↳ css/tailwindcss</a>
-                </li>
-                <li>
-                    <a class="skill" href="#">↳ javascript</a>
-                </li>
-                <li>
-                    <a class="skill" href="#">↳ bash</a>
-                </li>
-                <li>
-                    <a class="skill" href="#">↳ git</a>
-                </li>
-                <li>
-                    <a class="skill" href="#">↳ python</a>
-                </li>
-                <li>
-                    <a class="skill" href="#">↳ photoshop</a>
-                </li>
-            </ul>
+    
+            <!--skills-section-->
+            <div class="section2-content-2" data-card>
+                <img class="window-btn" src="./img/button.png" alt="">
+                <h2 class="about-title" data-title>/skills</h2>
+                <ul class="skills-list">
+                    <li>
+                        <a class="skill" href="https://www.google.com/search?q=html" data-subtitle> <img class="icon" src="img/html-icon.png" alt=""> html</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="https://www.google.com/search?q=css&oq=css" data-subtitle> <img class="icon" src="img/css-icon.png" alt=""> css/tailwindcss</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle> <img class="icon" src="img/js-icon.png" alt=""> javascript</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle><img class="icon" src="img/cpp-icon.png" alt="" srcset=""> c++</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle> <img class="icon" src="img/bash-icon.png" alt="" srcset=""> bash</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle><img class="icon" src="img/git-icon.png" alt="" srcset=""> git</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle><img class="icon" src="img/python-icon.png" alt="" srcset=""> python</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle><img class="icon" src="img/ps-icon.png" alt="" srcset=""> photoshop</a>
+                    </li>
+                    <li>
+                        <a class="skill" href="#" data-subtitle><img class="icon" src="img/ai-icon.png" alt="" srcset=""> illustrator</a>
+                    </li>
+                </ul>
+            </div>
+    
         </div>
 
         <!--projects-section-->
         <div id="projects-content">
-            <div class="section2-content-3">
+            <div class="section2-content-3" data-card>
                 <img class="window-btn" src="./img/button.png" alt="">
-                <h2 class="about-title">/projects</h2>
+                <h2 class="about-title" data-title>/projects</h2>
                 <div class="projects">
                     <div class="card">
                         <a href="https://dragonstore.netlify.app/" target="_blank">
-                            <img class="project-img" src="./img/dragonstore27.png" alt="">
+                            <img class="project-img" src="./img/dragon-store.png" alt="">
                         </a>
-                        <h3 class="project-name">DragonStore</h3>
-                        <p class="project-description">A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
+                        <div class="description">
+                            <h3 class="project-name"> DragonStore</h3>
+                            <p class="project-description">A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>DragonStore</h3>
+                        <p class="project-description" data-text>A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
                     </div>
                     <div class="card">
                         <a href="#">
                             <img class="project-img" src="./img/flipper.png" alt="">
                         </a>
-                        <h3 class="project-name">Flipper</h3>
-                        <p class="project-description">A basic log in page with a nice user interface and a modern feel and look.</p>
+                        <div class="description">
+                            <h3 class="project-name"> Flipper</h3>
+                            <p class="project-description"> A basic log in page with a nice user interface and a modern feel and look.</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Flipper</h3>
+                        <p class="project-description" data-text>A basic log in page with a nice user interface and a modern feel and look.</p>
+                    </div>
+                    <div class="card" data-hidden>
+                        <a href="#">
+                            <img class="project-img" src="./img/timely-1.png" alt="">
+                        </a>
+                        <div class="description">
+                            <h3 class="project-name"> Timely</h3>
+                            <p class="project-description"> Timely is a redefined pomodoro app with built in functions that would help students to regain their focus!</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Timely</h3>
+                        <p class="project-description" data-text>A basic log in page with a nice user interface and a modern feel and look.</p>
                     </div>
                 </div>
                 <span>
-                    <a class="project-btn" href="projects.html">more</a>
+                    <a class="project-btn" href="projects.html" data-subtitle>more</a>
                 </span>
             </div>
         </div>
 
         <!--contact-section-->
         <div id="footer">
-            <div class="section2-content-4">
+            <div class="section2-content-4" data-card>
                 <img class="window-btn" src="./img/button.png" alt="">
-                <h2 class="about-title">/contact</h2>
+                <h2 class="about-title" data-title>/contact</h2>
                 <div class="contact-content">
+                    <h3 class="about-subtitle" data-text> Connect with me!</h2>
                     <form name="contact" action="/success" method="POST" data-netlify="true">
                         <div class="input-box">
                                 <input name="name" class="user-input" type="text" placeholder="Name">
                                 <input name="email" class="user-input" type="text" placeholder="E-mail">
-                               <textarea name="message" id="message-input" cols="40" rows="5"></textarea>                      
+                               <textarea name="message" id="message-input" cols="40" rows="5" placeholder="Send me a message! "></textarea>                      
                             <span>
-                                <input class="button-input" type="submit" value="Submit">
+                                <input class="button-input" type="submit" value="Submit" data-bg>
                             </span>
                         </div>
                     </form>
@@ -177,17 +215,32 @@
                     </div>
                 </div>
             </div>     
+            
+            <div class="end-container">
+                <div class="section2-content-5" data-card>
+                    <img class="window-btn" src="./img/button.png" alt="">
+                    <h2 class="about-title" data-title>/end</h2>
+                    <div class="end-content">
+                        <div class="end">
+                            <a class="ext-link2" href="https://github.com/dazedmind/my-portfolio" data-subtitle>View Source Code</a>
+                            <p data-text ><i class="fa-solid fa-location-dot fa-xs"></i> Philippines</p>
+                            <p data-text> Icons from <a href="https://www.flaticon.com/" data-subtitle style="color: #6587a3;">Flaticon</a></p>
+                        </div>                  
+                    </div>
+                </div>  
 
-            <div class="section2-content-5">
-                <img class="window-btn" src="./img/button.png" alt="">
-                <h2 class="about-title">/end</h2>
-                <div class="end-content">
-                    <div class="end">
-                        <a class="ext-link2" href="https://github.com/dazedmind/my-portfolio">View Source Code</a>
-                        <p><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 16" width="16px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/><circle cx="12" cy="9" r="2.5"/></svg>Philippines</p>
-                    </div>                  
-                </div>
-            </div>   
+                <div class="section2-content-6" data-card>
+                    <img class="window-btn" src="./img/button.png" alt="">
+                    <h2 class="about-title" data-title>/theme</h2>
+                    <div class="button-container">
+                        <button id="defaultTheme">Default</button>
+                        <button id="draculaBtn">Dracula</button>
+                        <button id="lunariaBtn">Lunaria</button>
+                        <button id="gruvboxBtn">Gruvbox</button>
+                        <button id="afterglowBtn">Afterglow</button>
+                    </div>
+                </div> 
+            </div>
         </div>      
     </div>
 

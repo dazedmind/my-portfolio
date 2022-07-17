@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="projects.css" type="text/css" >
-    <link rel="stylesheet" media="screen and (max-width: 576px)" href="./vwp-small.css" type="text/css">
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./vwp-medium.css" type="text/css">
-    <link rel="stylesheet" media="screen and (max-width: 992px)" href="./vwp-wide.css" type="text/css">
-    <link rel="stylesheet" media="screen and (max-width: 1230px)" href="./vwp-wider.css" type="text/css">
-    <link rel="icon" href="./img/portfolio.png" type="icon/img">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="./vwp-medium.css" type="text/css"> -->
+    <link rel="icon" href="./img/allengfx.png" type="icon/img">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
 </head>
 
@@ -18,26 +15,26 @@
 <header id="header">
     <div>
         <p id="page-title"> 
-            <a href="#"><img id="header-icon" src="img/fileicon95.png" alt=""></a> My Portfolio
+            <a href="index.html"><img id="header-icon" src="img/fileicon95.png" alt=""></a> My Portfolio
         </p>
     </div>
     <nav>
         <div class="navbar">
-            <div>
-                <a class="nav-link" href="index.html">/about</a>
+            <div class="link">
+                <a class="nav-link" href="index.html" data-title>  <img src="img/avatar.png" alt="" class="nav-sprite" data-sprite> about</a>
             </div>
-            <div>
-                <a class="nav-link" href="#projects-content">/projects</a>
+            <div class="link">
+                <a class="nav-link" href="#section-2" data-title> <img src="img/start-up.png" alt="" class="nav-sprite" data-sprite> projects</a>
             </div>
-            <div>
-                <a class="nav-link" href="#footer">/contact</a>
+            <div class="link">
+                <a class="nav-link" href="#footer" data-title> <img src="img/call-button.png" alt="" class="nav-sprite" data-sprite> contact</a>
             </div>
             <div class="close-menu">
-                <span><i class="fa-solid fa-circle-chevron-up"></i></span>
+                <span><i class="fa-solid fa-circle-chevron-up fa-xl"></i></span>
             </div>
         </div>
         <div class="main-menu">
-            <span class="open-menu"><i class="fa-solid fa-circle-chevron-down"></i></span>
+            <span class="open-menu"><i class="fa-solid fa-circle-chevron-down fa-xl"></i></span>
         </div>
     </nav>
 </header>
@@ -49,57 +46,74 @@
 
     <!--SECTION-2-->
     <div id="section-2">
-        <h2 class="s2-title">my.projects:~$</h2>
+        <h2 class="s2-title" data-text>my.projects:~$</h2>
 
         <!--projects-section-->
         <div id="projects-content">
-            <div class="section2-content-3">
+            <div class="section2-content-3" data-card>
                 <img class="window-btn" src="./img/button.png" alt="">
-                <h2 class="about-title">/projects</h2>
+                <h2 class="about-title" data-title>/projects</h2>
                 <div class="projects">
                     <div class="card">
                         <a href="https://dragonstore.netlify.app/" target="_blank">
-                            <img class="project-img" src="./img/dragonstore27.png" alt="">
+                            <img class="project-img" src="./img/dragon-store.png" alt="">
                         </a>
-                        <h3 class="project-name">DragonStore</h3>
-                        <p class="project-description">A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
+                        <div class="description">
+                            <h3 class="project-name"> DragonStore</h3>
+                            <p class="project-description">A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>DragonStore</h3>
+                        <p class="project-description" data-text>A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
                     </div>
                     <div class="card">
                         <a href="#">
                             <img class="project-img" src="./img/flipper.png" alt="">
                         </a>
-                        <h3 class="project-name">Flipper</h3>
-                        <p class="project-description">A basic log in page with a nice user interface and a modern feel and look.</p>
+                        <div class="description">
+                            <h3 class="project-name"> Flipper</h3>
+                            <p class="project-description"> A basic log in page with a nice user interface and a modern feel and look.</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Flipper</h3>
+                        <p class="project-description" data-text>A basic log in page with a nice user interface and a modern feel and look.</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-hidden>
                         <a href="https://timelyapplication.netlify.app/">
-                            <img class="project-img" src="./img/Timely-Page1.jpg" alt="">
+                            <img class="project-img" src="./img/timely-1.png" alt="">
                         </a>
-                        <h3 class="project-name">Timely</h3>
-                        <p class="project-description">Timely is a redefined pomodoro app with built in functions that would help students to regain their focus!</p>
+                        <div class="description">
+                            <h3 class="project-name"> Timely</h3>
+                            <p class="project-description"> Timely is a redefined pomodoro app with built in functions that would help students to regain their focus!</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Timely</h3>
+                        <p class="project-description" data-text>A basic log in page with a nice user interface and a modern feel and look.</p>
                     </div>
                     <div class="card">
-                        <a href="https://www.behance.net/johnallenvalena" target="_blank">
+                        <a href="#">
                             <img class="project-img" src="./img/unimatrix.png" alt="">
                         </a>
-                        <h3 class="project-name">Graphic Designs</h3>
-                        <p class="project-description">My Collection of Graphic Designs that I have made.</p>
+                        <div class="description">
+                            <h3 class="project-name"> Graphic Design Collection</h3>
+                            <p class="project-description"> My Graphic Design Collection I have made through the years.</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Graphic Design Collection</h3>
+                        <p class="project-description" data-text>My Graphic Design Collection I have made through the years.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div id="footer">
-            <div class="section2-content-4">
+            <div class="section2-content-4" data-card>
                 <img class="window-btn" src="./img/button.png" alt="">
-                <h2 class="about-title">/contact</h2>
+                <h2 class="about-title" data-title>/contact</h2>
                 <div class="contact-content">
+                    <h3 class="about-subtitle" data-text> Connect with me!</h2>
                     <form name="contact" action="/success" method="POST" data-netlify="true">
                         <div class="input-box">
                                 <input name="name" class="user-input" type="text" placeholder="Name">
                                 <input name="email" class="user-input" type="text" placeholder="E-mail">
                                <textarea name="message" id="message-input" cols="40" rows="5"></textarea>                      
                             <span>
-                                <input class="button-input" type="submit" value="Submit">
+                                <input class="button-input" type="submit" value="Submit" data-bg>
                             </span>
                         </div>
                     </form>
@@ -116,23 +130,33 @@
                     </div>
                 </div>
             </div>     
-
-            <div class="section2-content-5">
-                <img class="window-btn" src="./img/button.png" alt="">
-                <h2 class="about-title">/end</h2>
-                <div class="end-content">
-                    <div class="end">
+            <div class="end-container">
+                <div class="section2-content-5" data-card>
+                    <img class="window-btn" src="./img/button.png" alt="">
+                    <h2 class="about-title" data-title>/end</h2>
+                    <div class="end-content">
                         <div class="end">
-                            <a class="ext-link2" href="https://github.com/dazedmind/my-portfolio">View Source Code</a>
-                            <p><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 16" width="16px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"/><circle cx="12" cy="9" r="2.5"/></svg>Philippines</p>
-                        </div>      
-                    </div>                  
-                </div>
-            </div>   
+                            <a class="ext-link2" href="https://github.com/dazedmind/my-portfolio" data-subtitle>View Source Code</a>
+                            <p data-text ><i class="fa-solid fa-location-dot fa-xs"></i> Philippines</p>
+                            <p data-text> Icons from <a href="https://www.flaticon.com/" data-subtitle style="color: #6587a3;">Flaticon</a></p>
+                        </div>                  
+                    </div>
+                </div>  
+
+                <div class="section2-content-6" data-card>
+                    <img class="window-btn" src="./img/button.png" alt="">
+                    <h2 class="about-title" data-title>/theme</h2>
+                    <div class="button-container">
+                        <button id="defaultTheme">Default</button>
+                        <button id="draculaBtn">Dracula</button>
+                        <button id="lunariaBtn">Lunaria</button>
+                        <button id="gruvboxBtn">Gruvbox</button>
+                        <button id="afterglowBtn">Afterglow</button>
+                    </div>
+                </div> 
+            </div>
         </div>      
-
-      
-
-    <script src="script.js"></script>
+    </div>
+    <script src="project.js" defer></script>
 </body>
 </html>

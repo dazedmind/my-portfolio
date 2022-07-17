@@ -14,22 +14,6 @@ function close(){
     mainMenu.style.top = '-30%';
 }
 
-// Shows Education Panel
-
-const educationSection = document.getElementById('education');
-const educationButton = document.getElementById('education-btn');
-const educationClose = document.getElementById('educ-hideBtn');
-
-educationButton.addEventListener('click',showEducation);
-educationClose.addEventListener('click',closeEducation);
-
-function showEducation() {
-    educationSection.style.display = 'block';
-}
-function closeEducation() {
-    educationSection.style.display = 'none';
-}
-
 //THEME Selector
 
 const defaultTheme = document.getElementById('defaultTheme');
@@ -41,7 +25,6 @@ const afterglowBtn = document.getElementById('afterglowBtn');
 const bodySelector = document.querySelector('body'); //bg
 const header = document.querySelector('header'); //fg
 const cardSelector = document.querySelectorAll("[data-card]");
-const background = document.querySelector('.background'); //unimatrix
 
 const title = document.querySelectorAll("[data-title]")
 const projectCards = document.querySelectorAll('.card')
@@ -55,7 +38,6 @@ const socmed = document.querySelectorAll('.socmed-icon')
 draculaBtn.addEventListener('click',() => {
     bodySelector.style.background = "#282a36";
     header.style.background = "#191a24";
-    background.style.backgroundImage = "none";
     cardSelector.forEach((e) => {
         e.style.background = "#191a24";
     })
@@ -91,7 +73,6 @@ draculaBtn.addEventListener('click',() => {
 lunariaBtn.addEventListener('click', () => {
     bodySelector.style.background = "#d5cfcc";
     header.style.background = "#ebe4e1";
-    background.style.backgroundImage = "none";
     cardSelector.forEach((e) => {
         e.style.background = "#ebe4e1";
     })
@@ -126,7 +107,6 @@ lunariaBtn.addEventListener('click', () => {
 gruvboxBtn.addEventListener('click', () => {
     bodySelector.style.background = "#313030";
     header.style.background = "#282828";
-    background.style.backgroundImage = "none";
     cardSelector.forEach((e) => {
         e.style.background = "#282828";
     })
@@ -161,7 +141,6 @@ gruvboxBtn.addEventListener('click', () => {
 afterglowBtn.addEventListener('click', () => {
     bodySelector.style.background = "#222222";
     header.style.background = "#151515";
-    background.style.backgroundImage = "none";
     cardSelector.forEach((e) => {
         e.style.background = "#151515";
     })
@@ -193,9 +172,6 @@ afterglowBtn.addEventListener('click', () => {
 defaultTheme.addEventListener('click', () => {
     bodySelector.style.background = "#222";
     header.style.background = "#1c1c1c";
-    background.style.cssText = `
-     background-image: linear-gradient(rgba(36, 36, 36, 0.9), rgba(36,36,36,0.9)), url(./img/unimatrix.png);
-    `
     cardSelector.forEach((e) => {
         e.style.background = "#1c1c1c";
     })
@@ -226,4 +202,3 @@ defaultTheme.addEventListener('click', () => {
     })
     mainMenu.style.background = "#1c1c1c";
 })
-

@@ -44,6 +44,14 @@
         margin: 1rem 0rem;
         width: inherit;
     }
+
+    .section2-content-6 {
+        font-size: 18px;
+        padding: 2rem;
+        margin: 1rem 0rem;
+        width: inherit;
+    }
+    
     .projects {
         display: flex;
         flex-direction: column;
@@ -76,5 +84,24 @@
     .end {
         margin-top: 0;
         padding: 2rem 0rem;
+    }
+
+    [data-hidden] {
+        display: none;
+    }
+
+    .card:hover .description {
+        display: none;
+    }
+    
+    .description {
+        position: absolute;
+        top: 0;
+        display: none;
+        margin: 3rem;
+    }
+
+    .card:hover .project-img {
+        filter: blur(0) brightness(120%);
     }
 }
