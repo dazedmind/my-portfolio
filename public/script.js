@@ -51,11 +51,15 @@ const buttonBg = document.querySelectorAll('[data-bg]')
 const skill = document.querySelectorAll('.skill')
 const sprite = document.querySelectorAll('[data-sprite]')
 const socmed = document.querySelectorAll('.socmed-icon')
+const mark = document.querySelectorAll('[data-mark]')
+const topBtn = document.getElementById("topBtn");
 
 draculaBtn.addEventListener('click',() => {
     bodySelector.style.background = "#282a36";
     header.style.background = "#191a24";
-    background.style.backgroundImage = "none";
+    background.style.cssText = `
+    background-image: linear-gradient(rgba(40, 42, 54, 0.9), rgba(40, 42, 54, 0.9)), url(./background/draculamatrix.png);
+    `
     cardSelector.forEach((e) => {
         e.style.background = "#191a24";
     })
@@ -85,13 +89,26 @@ draculaBtn.addEventListener('click',() => {
         e.classList.remove('lun-sprite');
     })
     mainMenu.style.background = "#191a24";
+    mark.forEach((e) => {
+        e.style.cssText = `
+        color: #fff;
+        background-color: #6272a4;
+        ` 
+    })
+    topBtn.style.cssText = `
+        color: #111;
+        background-color: #6272a4;
+        display: block;
+    `
 })
 
 
 lunariaBtn.addEventListener('click', () => {
     bodySelector.style.background = "#d5cfcc";
     header.style.background = "#ebe4e1";
-    background.style.backgroundImage = "none";
+    background.style.cssText = `
+    background-image: linear-gradient(rgba(213, 207, 204, 0.9), rgba(213, 207, 204, 0.9)), url(./background/lunariamatrix.png);
+    `
     cardSelector.forEach((e) => {
         e.style.background = "#ebe4e1";
     })
@@ -121,12 +138,25 @@ lunariaBtn.addEventListener('click', () => {
         e.classList.add('lun-sprite');
     })
     mainMenu.style.background = "#ebe4e1";
+    mark.forEach((e) => {
+        e.style.cssText = `
+        color: #111;
+        background-color: #3778a9;
+        ` 
+    })
+    topBtn.style.cssText = `
+        color: #111;
+        background-color: #3778a9;
+        display: block;
+    `
 })
 
 gruvboxBtn.addEventListener('click', () => {
     bodySelector.style.background = "#313030";
     header.style.background = "#282828";
-    background.style.backgroundImage = "none";
+    background.style.cssText = `
+    background-image: linear-gradient(rgba(49, 49, 49, 0.9), rgba(49,49,49,0.9)), url(./background/gruvmatrix.png);
+    `
     cardSelector.forEach((e) => {
         e.style.background = "#282828";
     })
@@ -156,12 +186,25 @@ gruvboxBtn.addEventListener('click', () => {
         e.classList.remove('nav-sprite', 'drc-sprite', 'lun-sprite', 'afg-sprite');
     })
     mainMenu.style.background = "#282828";
+    mark.forEach((e) => {
+        e.style.cssText = `
+        color: #ebdbb2;
+        background-color: #d79921;
+        ` 
+    })
+    topBtn.style.cssText = `
+        color: #111;
+        background-color: #d79921;
+        display: block;
+    `
 })
 
 afterglowBtn.addEventListener('click', () => {
     bodySelector.style.background = "#222222";
     header.style.background = "#151515";
-    background.style.backgroundImage = "none";
+    background.style.cssText = `
+     background-image: linear-gradient(rgba(35, 35, 35, 0.9), rgba(35,35,35,0.9)), url(./background/afterglowmatrix.png);
+    `
     cardSelector.forEach((e) => {
         e.style.background = "#151515";
     })
@@ -188,6 +231,20 @@ afterglowBtn.addEventListener('click', () => {
         e.classList.remove('drc-sprite', 'lun-sprite', 'grv-sprite', 'nav-sprite')
     })
     mainMenu.style.background = "#151515";
+    mark.forEach((e) => {
+        e.style.backgroundColor = "#a53c23";
+    })
+    mark.forEach((e) => {
+        e.style.cssText = `
+        color: #d0d0d0;
+        background-color: #a53c23;
+        ` 
+    })
+    topBtn.style.cssText = `
+        color: #d0d0d0;
+        background-color: #a53c23;
+        display: block;
+    `
 })
 
 defaultTheme.addEventListener('click', () => {
@@ -225,5 +282,36 @@ defaultTheme.addEventListener('click', () => {
         e.classList.remove('drc-sprite', 'lun-sprite', 'grv-sprite', 'afg-sprite');
     })
     mainMenu.style.background = "#1c1c1c";
+    mark.forEach((e) => {
+        e.style.cssText = `
+        color: #fff;
+        background-color: #6587a3;
+        ` 
+    })
+    topBtn.style.cssText = `
+        color: #111;
+        background-color: #6587a3;
+        display: block;
+    `
 })
 
+
+
+topBtn.addEventListener('click', topFunction);
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    topBtn.style.display = "block";
+  } 
+  else {
+    topBtn.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
