@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="projects.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 768px)" href="./vwp-medium.css" type="text/css"> -->
+    <link rel="icon" href="./img/fileicon95-copy.png" type="icon/img">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+</head>
+
+<!--start header-->
+<header id="header">
+    <div>
+        <p id="page-title"> 
+            <a href="index.html"><img id="header-icon" src="img/fileicon95.png" alt=""></a> My Portfolio
+        </p>
+    </div>
+    <nav>
+        <div class="navbar">
+            <div class="link">
+                <a class="nav-link" href="index.html" data-title>  <img src="img/avatar.png" alt="" class="nav-sprite" data-sprite> about</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="projects.html" data-title> <img src="img/start-up.png" alt="" class="nav-sprite" data-sprite> projects</a>
+            </div>
+            <div class="link">
+                <a class="nav-link" href="#footer" data-title> <img src="img/call-button.png" alt="" class="nav-sprite" data-sprite> contact</a>
+            </div>
+            <div class="close-menu">
+                <span><i class="fa-solid fa-minus fa-lg"></i></span>
+            </div>
+        </div>
+        <div class="main-menu">
+            <span class="open-menu"><i class="fa-solid fa-plus fa-lg"></i></span>
+        </div>
+    </nav>
+</header>
+
+<!--end header-->
+
+<body>
+    <noscript>Please enable JavaScript, you're missing out!</noscript>
+
+    <!--SECTION-2-->
+    <div id="section-2">
+        <h2 class="s2-title" data-text>contact:~$</h2>
+
+        <!--projects-section-->
+
+        <div id="footer">
+            <div class="section2-content-4" data-card>
+                <img class="window-btn" src="./img/button.png" alt="">
+                <h2 class="about-title" data-title>/contact</h2>
+                <div class="contact-content">
+                    <h3 class="about-subtitle" data-text> Hit me up!</h2>
+                    <form name="contact" action="/success" method="POST" data-netlify="true">
+                        <div class="input-box">
+                                <input name="name" class="user-input" type="text" placeholder="Name">
+                                <input name="email" class="user-input" type="text" placeholder="E-mail">
+                                <textarea name="message" id="message-input" cols="40" rows="5" placeholder="Tell me about it..."></textarea>                      
+                            <span>
+                                <input class="button-input" type="submit" value="Submit" data-bg>
+                            </span>
+                        </div>
+                    </form>
+                    <div class="socmed">
+                        <a href="https://github.com/dazedmind" target="_blank">
+                            <img class="socmed-icon" src="./img/github.png" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/in/johnallenvalena/" target="_blank">
+                            <img class="socmed-icon" src="./img/linkedin.png" alt="">
+                        </a>
+                        <a href="https://www.behance.net/johnallenvalena">
+                            <img class="socmed-icon" src="./img/behance.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>     
+            <div class="end-container">
+                <div class="section2-content-5" data-card>
+                    <img class="window-btn" src="./img/button.png" alt="">
+                    <h2 class="about-title" data-title>/end</h2>
+                    <div class="end-content">
+                        <div class="end">
+                            <a class="ext-link2" href="https://github.com/dazedmind/my-portfolio" data-subtitle>View Source Code</a>
+                            <p data-text ><i class="fa-solid fa-location-dot fa-xs"></i> Philippines</p>
+                            <p data-text> Icons from <a href="https://www.flaticon.com/" data-subtitle style="color: #6587a3;">Flaticon</a></p>
+                        </div>                  
+                    </div>
+                </div>  
+
+                <div class="section2-content-6" data-card>
+                    <img class="window-btn" src="./img/button.png" alt="">
+                    <h2 class="about-title" data-title>/theme</h2>
+                    <div class="button-container">
+                        <button id="defaultTheme">Default</button>
+                        <button id="draculaBtn">Dracula</button>
+                        <button id="lunariaBtn">Lunaria</button>
+                        <button id="gruvboxBtn">Gruvbox</button>
+                        <button id="afterglowBtn">Afterglow</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="topBtn">back to top</button>
+            </div>
+        </div>      
+    </div>
+    <script src="project.js" defer></script>
+</body>
+</html>
