@@ -794,6 +794,9 @@ em {
 	}
 }
 
+/* ------ MEDIA QUERIES -------- */
+
+
 @media (min-width: 577px) and (max-width: 900px) {
 	.section2-content-3 {
 		font-size: 18px;
@@ -869,6 +872,9 @@ em {
 /*---shows the navbar button on 800px---*/
 
 @media (max-width: 800px) {
+	.project-overview {
+		margin: 0rem;
+	}
 	.navbar {
 		height: 16vh;
 		position: fixed;
@@ -898,7 +904,8 @@ em {
 
 /*--768px and under--*/
 
-@media (min-width: 576px) and (max-width: 1024px) {
+/* FLAG */
+@media (min-width: 576px) and (max-width: 1000px) {
 	#subtitle {
 		font-size: 16px;
 	}
@@ -917,7 +924,7 @@ em {
 
 	.projects {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 	}
 
 	.card {
@@ -938,6 +945,7 @@ em {
 	}
 }
 
+/* FLAG */
 @media screen and (min-width: 576px) and (max-width: 768px) {
 	.section2-content-3,
 	.section2-content-4,
