@@ -623,6 +623,11 @@ em {
 		font-size: 18px;
 	}
 
+	.project-overview {
+		font-size: 18px;
+		padding: 1rem;
+	}
+
 	.content-text {
 		font-size: 16px;
 		display: flex;
@@ -701,6 +706,7 @@ em {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		margin-top: 3rem;
 	}
 	.card {
 		margin: 0.8rem;
@@ -883,10 +889,11 @@ em {
 		left: 0;
 		z-index: 1;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		background: var(--fg-color);
 		transition: top 0.6s ease;
 		display: none;
+		padding: 2rem;
 	}
 	.open-menu {
 		display: block;
