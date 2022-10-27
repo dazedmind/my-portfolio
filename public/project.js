@@ -34,7 +34,7 @@ const skill = document.querySelectorAll('.skill');
 const sprite = document.querySelectorAll('[data-sprite]');
 const socmed = document.querySelectorAll('.socmed-icon');
 
-draculaBtn.addEventListener('click', () => {
+function draculaTheme() {
 	bodySelector.style.background = '#282a36';
 	header.style.background = '#191a24';
 	cardSelector.forEach((e) => {
@@ -66,9 +66,22 @@ draculaBtn.addEventListener('click', () => {
 		e.classList.remove('lun-sprite');
 	});
 	mainMenu.style.background = '#191a24';
-});
 
-lunariaBtn.addEventListener('click', () => {
+	var SetTheme = document.body;
+
+    SetTheme.classList.toggle('draculaTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('draculaTheme')){
+        console.log("Dracula Theme");
+        theme = "DRACULA";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+function lunariaTheme() {
 	bodySelector.style.background = '#d5cfcc';
 	header.style.background = '#ebe4e1';
 	cardSelector.forEach((e) => {
@@ -100,9 +113,22 @@ lunariaBtn.addEventListener('click', () => {
 		e.classList.add('lun-sprite');
 	});
 	mainMenu.style.background = '#ebe4e1';
-});
 
-gruvboxBtn.addEventListener('click', () => {
+	var SetTheme = document.body;
+
+    SetTheme.classList.toggle('lunariaTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('lunariaTheme')){
+        console.log("Lunaria Theme");
+        theme = "LUNARIA";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+function gruvBox() {
 	bodySelector.style.background = '#313030';
 	header.style.background = '#282828';
 	cardSelector.forEach((e) => {
@@ -134,7 +160,52 @@ gruvboxBtn.addEventListener('click', () => {
 		e.classList.remove('nav-sprite', 'drc-sprite', 'lun-sprite', 'afg-sprite');
 	});
 	mainMenu.style.background = '#282828';
-});
+
+	 // set theme to LocalStorage
+	var SetTheme = document.body;
+
+	SetTheme.classList.toggle('gruvboxTheme');
+
+	var theme;
+
+	if(SetTheme.classList.contains('gruvboxTheme')){
+		console.log("Gruvbox Theme");
+		theme = "GRUVBOX";
+	}
+
+	localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+function afterGlow() {
+	bodySelector.style.background = '#222222';
+	header.style.background = '#151515';
+	cardSelector.forEach((e) => {
+		e.style.background = '#151515';
+	});
+	title.forEach((e) => {
+		e.style.color = '#d3a04d';
+	});
+	projectCards.forEach((e) => {
+		e.style.background = '#222222';
+	});
+	subtitle.forEach((e) => {
+		e.style.color = '#a53c23';
+	});
+	text.forEach((e) => {
+		e.style.color = '#d0d0d0';
+	});
+	buttonBg.forEach((e) => {
+		e.style.background = '#d3a04d';
+	});
+	skill.forEach((e) => {
+		e.style.background = '#222222';
+	});
+	sprite.forEach((e) => {
+		e.classList.add('afg-sprite');
+		e.classList.remove('drc-sprite', 'lun-sprite', 'grv-sprite', 'nav-sprite');
+	});
+	mainMenu.style.background = '#151515';
+}
 
 afterglowBtn.addEventListener('click', () => {
 	bodySelector.style.background = '#222222';
@@ -165,7 +236,22 @@ afterglowBtn.addEventListener('click', () => {
 		e.classList.remove('drc-sprite', 'lun-sprite', 'grv-sprite', 'nav-sprite');
 	});
 	mainMenu.style.background = '#151515';
+
+	 // set theme to LocalStorage
+	var SetTheme = document.body;
+
+	SetTheme.classList.toggle('afterglowTheme');
+
+	var theme;
+
+	if(SetTheme.classList.contains('afterglowTheme')){
+		console.log("Afterglow");
+		theme = "AFTERGLOW";
+	}
+
+	localStorage.setItem("PageTheme", JSON.stringify(theme));
 });
+
 
 defaultTheme.addEventListener('click', () => {
 	bodySelector.style.background = '#222';
@@ -199,8 +285,39 @@ defaultTheme.addEventListener('click', () => {
 		e.classList.remove('drc-sprite', 'lun-sprite', 'grv-sprite', 'afg-sprite');
 	});
 	mainMenu.style.background = '#1c1c1c';
+
+	var SetTheme = document.body;
+
+    SetTheme.classList.toggle('defaultTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('defaultTheme')){
+        console.log("Default Theme");
+        theme = "DEFAULT";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
 });
 
+// retains chosen theme on reload
+let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
+console.log(GetTheme);
+
+if (GetTheme === "AFTERGLOW") {
+    afterGlow();
+} else if (GetTheme === "GRUVBOX") {
+    gruvBox();
+} else if (GetTheme === "LUNARIA") {
+    lunariaTheme();
+} else if (GetTheme === "DRACULA") {
+    draculaTheme();
+} else {
+    greenblackTheme();
+}
+
+
+// scroll to top
 topBtn.addEventListener('click', topFunction);
 
 window.onscroll = function () {

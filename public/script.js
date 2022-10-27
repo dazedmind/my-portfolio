@@ -15,7 +15,6 @@ function close(){
 }
 
 // Shows Education Panel
-
 const educationSection = document.getElementById('education');
 const educationButton = document.getElementById('education-btn');
 const educationClose = document.getElementById('educ-hideBtn');
@@ -31,7 +30,6 @@ function closeEducation() {
 }
 
 //THEME Selector
-
 const defaultTheme = document.getElementById('defaultTheme');
 const draculaBtn = document.getElementById('draculaBtn');
 const lunariaBtn = document.getElementById('lunariaBtn');
@@ -54,7 +52,7 @@ const socmed = document.querySelectorAll('.socmed-icon')
 const mark = document.querySelectorAll('[data-mark]')
 const topBtn = document.getElementById("topBtn");
 
-draculaBtn.addEventListener('click',() => {
+function draculaTheme() {
     bodySelector.style.background = "#282a36";
     header.style.background = "#191a24";
     background.style.cssText = `
@@ -100,10 +98,22 @@ draculaBtn.addEventListener('click',() => {
         background-color: #6272a4;
         display: block;
     `
-})
+    var SetTheme = document.body;
+
+    SetTheme.classList.toggle('draculaTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('draculaTheme')){
+        console.log("Dracula Theme");
+        theme = "DRACULA";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
 
 
-lunariaBtn.addEventListener('click', () => {
+function lunariaTheme() {
     bodySelector.style.background = "#d5cfcc";
     header.style.background = "#ebe4e1";
     background.style.cssText = `
@@ -149,9 +159,22 @@ lunariaBtn.addEventListener('click', () => {
         background-color: #3778a9;
         display: block;
     `
-})
 
-gruvboxBtn.addEventListener('click', () => {
+    var SetTheme = document.body;
+
+    SetTheme.classList.toggle('lunariaTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('lunariaTheme')){
+        console.log("Lunaria Theme");
+        theme = "LUNARIA";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+function gruvBox() {
     bodySelector.style.background = "#313030";
     header.style.background = "#282828";
     background.style.cssText = `
@@ -197,13 +220,26 @@ gruvboxBtn.addEventListener('click', () => {
         background-color: #d79921;
         display: block;
     `
-})
+    var SetTheme = document.body;
 
-afterglowBtn.addEventListener('click', () => {
+    SetTheme.classList.toggle('gruvboxTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('gruvboxTheme')){
+        console.log("Gruvbox Theme");
+        theme = "GRUVBOX";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+
+function afterGlow() {
     bodySelector.style.background = "#222222";
     header.style.background = "#151515";
     background.style.cssText = `
-     background-image: linear-gradient(rgba(35, 35, 35, 0.9), rgba(35,35,35,0.9)), url(./background/afterglowmatrix.png);
+    background-image: linear-gradient(rgba(35, 35, 35, 0.9), rgba(35,35,35,0.9)), url(./background/afterglowmatrix.png);
     `
     cardSelector.forEach((e) => {
         e.style.background = "#151515";
@@ -245,13 +281,26 @@ afterglowBtn.addEventListener('click', () => {
         background-color: #a53c23;
         display: block;
     `
-})
+    // set theme to LocalStorage
+    var SetTheme = document.body;
 
-defaultTheme.addEventListener('click', () => {
+    SetTheme.classList.toggle('afterglowTheme');
+
+    var theme;
+
+    if(SetTheme.classList.contains('afterglowTheme')){
+        console.log("Afterglow");
+        theme = "AFTERGLOW";
+    }
+
+    localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+function greenblackTheme() {
     bodySelector.style.background = "#222";
     header.style.background = "#1c1c1c";
     background.style.cssText = `
-     background-image: linear-gradient(rgba(36, 36, 36, 0.9), rgba(36,36,36,0.9)), url(./img/unimatrix.png);
+    background-image: linear-gradient(rgba(36, 36, 36, 0.9), rgba(36,36,36,0.9)), url(./img/unimatrix.png);
     `
     cardSelector.forEach((e) => {
         e.style.background = "#1c1c1c";
@@ -293,9 +342,36 @@ defaultTheme.addEventListener('click', () => {
         background-color: #6587a3;
         display: block;
     `
-})
+        // set theme to LocalStorage
+        var SetTheme = document.body;
 
+        SetTheme.classList.toggle('defaultTheme');
+    
+        var theme;
+    
+        if(SetTheme.classList.contains('defaultTheme')){
+            console.log("Default Theme");
+            theme = "DEFAULT";
+        }
+    
+        localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
 
+// retains chosen theme on reload
+let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
+console.log(GetTheme);
+
+if (GetTheme === "AFTERGLOW") {
+    afterGlow();
+} else if (GetTheme === "GRUVBOX") {
+    gruvBox();
+} else if (GetTheme === "LUNARIA") {
+    lunariaTheme();
+} else if (GetTheme === "DRACULA") {
+    draculaTheme();
+} else {
+    greenblackTheme();
+}
 
 topBtn.addEventListener('click', topFunction);
 

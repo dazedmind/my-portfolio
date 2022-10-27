@@ -9,7 +9,6 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="./vwp-medium.css" type="text/css">
     <link rel="icon" href="./img/fileicon95-copy.png" type="icon/img">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
-
 </head>
 
 <!--start header-->
@@ -28,9 +27,8 @@
                 <a class="nav-link" href="projects.html" data-title> <img src="img/start-up.png" alt="" class="nav-sprite" data-sprite> projects</a>
             </div>
             <div class="link">
-                <a class="nav-link" href="contact.html" data-title> <img src="img/call-button.png" alt="" class="nav-sprite" data-sprite> contact</a>
+                <a class="nav-link" href="#footer" data-title> <img src="img/call-button.png" alt="" class="nav-sprite" data-sprite> contact</a>
             </div>
-
             <div class="close-menu">
                 <span><i class="fa-solid fa-minus fa-lg"></i></span>
             </div>
@@ -91,13 +89,6 @@
                     <button id="educ-hideBtn" onclick="closeEducation()" data-subtitle>collapse</button>
                 </div>
     
-                <!-- <span>
-                    <button id="hobbies-btn" onclick="functionss()">/hobbies</button>
-                </span>
-                <div id="hobbies">
-                    <p class="prologue">Aside from coding, I really love Photography. As any other teenager, I also love playing FPS and MOBA games; most specifically Valorant and League of Legends.
-                    </p>
-                </div> -->
                 <span>
                     <a class="ext-link" href="./Resume.pdf" data-subtitle><i class="fa-solid fa-file-arrow-down"></i> cv</a>
                 </span>
@@ -233,16 +224,15 @@
                         </div>                  
                     </div>
                 </div>  
-
                 <div class="section2-content-6" data-card>
                     <img class="window-btn" src="./img/button.png" alt="">
                     <h2 class="about-title" data-title>/theme</h2>
                     <div class="button-container">
-                        <button id="defaultTheme">Default</button>
-                        <button id="draculaBtn">Dracula</button>
-                        <button id="lunariaBtn">Lunaria</button>
-                        <button id="gruvboxBtn">Gruvbox</button>
-                        <button id="afterglowBtn">Afterglow</button>
+                        <button id="defaultTheme" onclick="greenblackTheme()">Default</button>
+                        <button id="draculaBtn" onclick="draculaTheme()">Dracula</button>
+                        <button id="lunariaBtn" onclick="lunariaTheme()">Lunaria</button>
+                        <button id="gruvboxBtn" onclick="gruvBox()"">Gruvbox</button>
+                        <button id="afterglowBtn" onclick="afterGlow()">Afterglow</button>
                     </div>
                 </div> 
             </div>
