@@ -9,6 +9,8 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="./vwp-medium.css" type="text/css">
     <link rel="icon" href="./img/fileicon95-copy.png" type="icon/img">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="lightbox.css">
 </head>
 
 <!--start header-->
@@ -61,14 +63,10 @@
     <div id="section-2">
         <h2 class="s2-title" data-text>about.me:~$</h2>
         <div id="wide-flex">
-            <div class="section2-content-1" data-card>
+            <div class="section2-content-1" data-card data-aos="zoom-in">
                 <img class="window-btn" src="./img/button.png" alt="">
                 <h2 class="about-title" data-title>/background</h2>
                 <p class="prologue" data-text>Hello world! I am John Allen Valena, a self taught <mark data-mark>web-developer</mark> and <mark data-mark>graphic designer</mark>, 17 years old from Manila, <span class="highlight"> <a href="https://www.google.com/search?q=philippines" target="_blank" data-subtitle>Philippines</a></span>. I like to create and design web applications.
-                </p>
-    
-                <p class="prologue" data-text>
-                    I have been studying front-end developing since I was 13 although that time, I was struggling really hard since my little mind can't comprehend basic HTML tags. Back then I don't really understand how the internet works. As a kid, I am always fascinated on how things work around me. From then on I knew that this is what I want to do.
                 </p>
                 <span>
                     <button id="education-btn" onclick="showEducation()" data-title>/education</button>
@@ -95,7 +93,7 @@
             </div>
     
             <!--skills-section-->
-            <div class="section2-content-2" data-card>
+            <div class="section2-content-2" data-card data-aos="zoom-in" data-aos-delay="100">
                 <img class="window-btn" src="./img/button.png" alt="">
                 <h2 class="about-title" data-title>/skills</h2>
                 <ul class="skills-list">
@@ -136,14 +134,41 @@
 
         <!--projects-section-->
         <div id="projects-content">
-            <div class="section2-content-3" data-card>
+            <div class="section2-content-3" data-card data-aos="fade-up">
                 <img class="window-btn" src="./img/button.png" alt="">
                 <h2 class="about-title" data-title>/projects</h2>
                 <div class="projects">
+                    <!-- METRO -->
                     <div class="card">
-                        <a href="https://dragonstore.netlify.app/" target="_blank">
+                        <a href="img/metro-longscreenshot.png" data-lightbox="image-6" data-title="https://www.behance.net/gallery/150317913/Metro" >
+                            <img class="project-img" src="./img/metro-0.png" alt="">
+                        </a>
+                        <div class="description">
+                            <h3 class="project-name">Metro</h3>
+                            <p class="project-description"> A mockup UI for an online metro card system</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Metro</h3>
+                        <p class="project-description" data-text> A mockup UI for an online metro card system</p>
+                    </div>
+                    <!-- ONLINE SCOREBOARD -->
+                    <div class="card"> 
+                        <a href="img/online-scoreboard.png" data-lightbox="image-7">
+                            <img class="project-img" src="./img/scoreboard-cover.png" alt="">
+                        </a>
+                        <a href="img/online-scoreboard-func.png" data-lightbox="image-7"></a>
+                        <div class="description">
+                            <h3 class="project-name">Online Scoreboard</h3>
+                            <p class="project-description"> A simple online scoreboard made with JavaScript.</p>
+                        </div>
+                        <h3 class="project-name" data-subtitle>Online Scoreboard</h3>
+                        <p class="project-description" data-text> A simple online scoreboard made with JavaScript.</p>
+                    </div>
+                    <!-- DRAGONSTORE -->
+                    <div class="card">
+                        <a href="img/dragon-store.png" data-lightbox="image-1" data-title="https://dragonstore.netlify.app/">
                             <img class="project-img" src="./img/dragon-store.png" alt="">
                         </a>
+                        <a href="img/dragon-store-light.png" data-lightbox="image-1"></a>
                         <div class="description">
                             <h3 class="project-name"> DragonStore</h3>
                             <p class="project-description">A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
@@ -151,41 +176,16 @@
                         <h3 class="project-name" data-subtitle>DragonStore</h3>
                         <p class="project-description" data-text>A simple mockup e-commerce website with a dark/light mode feature and as well as a user-friendly interface.</p>
                     </div>
-                    <div class="card">
-                        <a href="#">
-                            <img class="project-img" src="./img/flipper.png" alt="">
-                        </a>
-                        <div class="description">
-                            <h3 class="project-name"> Flipper</h3>
-                            <p class="project-description"> A basic log in page with a nice user interface and a modern feel and look.</p>
-                        </div>
-                        <h3 class="project-name" data-subtitle>Flipper</h3>
-                        <p class="project-description" data-text>A basic log in page with a nice user interface and a modern feel and look.</p>
-                    </div>
-                    <div class="card" data-hidden>
-                        <a href="#">
-                            <img class="project-img" src="./img/timely-1.png" alt="">
-                        </a>
-                        <div class="description">
-                            <h3 class="project-name"> Timely</h3>
-                            <p class="project-description"> Timely is a redefined pomodoro app with built in functions that would help students to regain their focus!</p>
-                        </div>
-                        <h3 class="project-name" data-subtitle>Timely</h3>
-                        <p class="project-description" data-text>A basic log in page with a nice user interface and a modern feel and look.</p>
-                    </div>
                 </div>
                 <div class="button-container">
                     <button id="more-project" onclick="window.location.href='projects.html'">More Projects ▶</button>
                 </div>
-                <!-- <span>
-                    <a class="project-btn" href="projects.html" data-subtitle>more</a>
-                </span> -->
             </div>
         </div>
 
         <!--contact-section-->
         <div id="footer">
-            <div class="section2-content-4" data-card>
+            <div class="section2-content-4" data-card data-aos="fade-up">
                 <img class="window-btn" src="./img/button.png" alt="">
                 <h2 class="about-title" data-title>/contact</h2>
                 <div class="contact-content">
@@ -215,7 +215,7 @@
             </div>     
             
             <div class="end-container">
-                <div class="section2-content-5" data-card>
+                <div class="section2-content-5" data-card data-aos="fade-up">
                     <img class="window-btn" src="./img/button.png" alt="">
                     <h2 class="about-title" data-title>/end</h2>
                     <div class="end-content">
@@ -226,7 +226,7 @@
                         </div>                  
                     </div>
                 </div>  
-                <div class="section2-content-6" data-card>
+                <div class="section2-content-6" data-card data-aos="fade-up">
                     <img class="window-btn" src="./img/button.png" alt="">
                     <h2 class="about-title" data-title>/theme</h2>
                     <div class="button-container">
@@ -245,5 +245,10 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="lightbox-plus-jquery.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

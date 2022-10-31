@@ -305,14 +305,14 @@ body {
 	display: flex;
 	list-style-type: none;
 	flex-direction: row;
-	justify-content: center;
+	/* justify-content: center; */
 	transition: 0.3s ease all;
 	margin-top: 2rem;
 	flex-wrap: wrap;
 }
 
 .skills-list li {
-	padding: 0.8rem;
+	padding: 0.4rem;
 }
 
 .skills-list li a {
@@ -441,7 +441,8 @@ em {
 }
 
 .prologue {
-	font-family: 'Source Code Pro', monospace;
+	/* font-family: 'Source Code Pro', monospace; */
+	font-family: 'Roboto Mono', sans-serif;
 	padding: 1rem;
 	text-align: justify;
 	line-height: 2rem;
@@ -919,10 +920,14 @@ p.typing {
 		height: 24px;
 	}
 
+	.skills-list {
+		display: flex;
+		margin: 0;
+	}
+
 	.skills-list li a {
 		display: flex;
 		align-items: center;
-		gap: 1rem;
 	}
 
 	[data-hidden] {
