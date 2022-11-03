@@ -175,10 +175,11 @@ function lunariaTheme() {
 }
 
 function gruvBox() {
-    bodySelector.style.background = "#313030";
+    // bodySelector.style.background = "#313030";
+    bodySelector.style.background = "rgba(49, 49, 49)";
     header.style.background = "#282828";
     background.style.cssText = `
-    background-image: linear-gradient(rgba(49, 49, 49, 0.9), rgba(49,49,49,0.9)), url(./background/gruvmatrix.png);
+    background-image: linear-gradient(rgba(49, 49, 49, 0.8), rgba(49,49,49,0.8)), url(./background/gruvmatrix.png);
     `
     cardSelector.forEach((e) => {
         e.style.background = "#282828";
@@ -236,7 +237,8 @@ function gruvBox() {
 
 
 function afterGlow() {
-    bodySelector.style.background = "#222222";
+    // bodySelector.style.background = "#222222";
+    bodySelector.style.background = "rgba(35, 35, 35)";
     header.style.background = "#151515";
     background.style.cssText = `
     background-image: linear-gradient(rgba(35, 35, 35, 0.9), rgba(35,35,35,0.9)), url(./background/afterglowmatrix.png);
